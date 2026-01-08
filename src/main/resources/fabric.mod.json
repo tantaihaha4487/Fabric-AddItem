@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "additem",
+  "version": "${version}",
+  "name": "AddItem",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/additem/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "net.thanachot.additem.client.AdditemDataGenerator"
+    ],
+    "client": [
+      "net.thanachot.additem.client.AdditemClient"
+    ],
+    "main": [
+      "net.thanachot.additem.Additem"
+    ]
+  },
+  "mixins": [
+    "additem.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
